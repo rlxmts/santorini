@@ -1,0 +1,57 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.diferenciais{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 50vh;
+     &_img{
+        display: block;
+        height: 100%;
+        background-image: url('../img/salao.webp');
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 80%;
+        }
+     }
+     &_textos{
+        @include mixins.flex-d-j-a(column, center, start);
+        padding-left: 2rem;
+        background-color: variaveis.$laranja;
+        height: 100%;
+
+        h2{
+            @include mixins.subtitulo-maiusculo();
+            color: white;
+            margin-bottom: 2rem;
+        }
+        p{
+            @include mixins.textos();
+            color: white;
+            font-size: 1.3rem;
+            line-height: 2rem;
+            letter-spacing: 1px;
+        }
+     }
+}
+
+@media screen and (max-width: 768px) {
+    .diferenciais{
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+
+        &_img{
+            height: 250px;
+        }
+        &_textos{
+            padding: 3rem 1rem;
+        }
+    }
+}

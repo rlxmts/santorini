@@ -1,0 +1,46 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.proposito{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    height: 80vh;
+    padding: 5rem 1rem;
+    h4{
+        @include mixins.titulo();
+        font-size: 3rem;
+        line-height: 3.5rem;
+        text-align: end;
+        justify-self: end;
+    }
+
+    div{
+        h1{
+            @include mixins.subtitulo-maiusculo();
+        }
+        p{
+            margin-top: 2rem;
+            @include mixins.textos();
+            font-size: 1.3rem;
+            line-height: 2rem;
+            letter-spacing: 1px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .proposito{
+        height: auto;
+        grid-template-columns: 1fr;
+
+        h4{
+            justify-self: start;
+            text-align: start;
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+}

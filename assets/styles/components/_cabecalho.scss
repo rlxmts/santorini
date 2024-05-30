@@ -1,0 +1,201 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+
+#link-pular-conteudo {
+    @include mixins.esconderConteudo();
+}
+
+.cabecalho {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: .5s;
+
+    &_container {
+        height: 90px;
+        transition: .5s;
+        @include mixins.container();
+        @include mixins.flex-d-j-a(row, space-between, center);
+
+        h1 {
+            a {
+                font-family: variaveis.$font-logo;
+                font-size: 3rem;
+                color: variaveis.$preto;
+            }
+        }
+
+        nav {
+            button {
+                display: none;
+            }
+
+            ul {
+                @include mixins.flex-d-j-a(row, normal, normal);
+                gap: 2rem;
+                transition: 1s;
+
+                li {
+
+                    a {
+                        @include mixins.links();
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cabecalho-scroll{
+    background-color: white;
+    box-shadow: 0px -10px 15px #000;
+}
+
+.cabecalho-scroll .logo{
+    color: variaveis.$laranja;
+}
+
+@media screen and (max-width: 768px) {
+    .cabecalho {
+
+        &_container {
+            height: 90px;
+            h1 {
+                a {
+                    font-size: 2.5rem;
+                }
+            }
+
+            nav {
+                div {
+                    height: 20px;
+                    width: 20px;
+                    position: relative;
+
+                    button {
+                        @include mixins.barrinha-menu();
+                        color: transparent;
+                        border: none;
+                        display: block;
+                        top: 10px;
+                        z-index: 99999;
+
+                        &::after {
+                            @include mixins.barrinha-menu();
+                            content: '';
+                            top: 5px;
+                        }
+
+                        &::before {
+                            @include mixins.barrinha-menu();
+                            content: '';
+                            bottom: 5px;
+                        }
+                    }
+
+                }
+
+                .ativo button {
+                    background-color: transparent;
+                }
+
+                .ativo button::before {
+                    animation: abrindoMenu2 1s;
+                    top: 0;
+                    transform: rotate(45deg);
+                    background-color: white;
+
+                }
+
+                .ativo button::after {
+                    animation: abrindoMenu 1s;
+                    top: 0;
+                    transform: rotate(-45deg);
+                    background-color: white;
+
+                }
+
+                @keyframes abrindoMenu {
+                    0% {
+                        top: 5px;
+                        transform: rotate(0);
+                    }
+
+                    50% {
+                        top: 0;
+                        transform: rotate(0);
+                    }
+
+                    100% {
+                        top: 0;
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                @keyframes abrindoMenu2 {
+                    0% {
+                        bottom: 5px;
+                        transform: rotate(0);
+                    }
+
+                    50% {
+                        bottom: 0;
+                        transform: rotate(0);
+                    }
+
+                    100% {
+                        bottom: 0;
+                        transform: rotate(45deg);
+                    }
+                }
+
+                ul {
+                    position: fixed;
+                    top: -100%;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100vw;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: variaveis.$laranja;
+
+                    li {
+                        a {
+                            color: white;
+                            position: relative;
+                            font-size: 2rem;
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+                .menu-ativo {
+                    top: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 668px) {
+    .cabecalho {
+
+        nav {
+            ul {
+                li {
+
+                    a {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

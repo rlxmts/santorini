@@ -1,0 +1,129 @@
+@use './variaveis';
+
+@mixin container() {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+@mixin titulo() {
+    width: 100%;
+    max-width: 700px;
+    font-family: variaveis.$font-titulo;
+    font-size: 5rem;
+    font-weight: 300;
+    color: variaveis.$preto;
+    line-height: 6rem;
+    text-align: center;
+    display: block;
+}
+
+@mixin subtitulo() {
+    width: 100%;
+    max-width: 700px;
+    font-family: variaveis.$font-subtitulo;
+    font-size: 2rem;
+    font-weight: 300;
+    color: variaveis.$laranja;
+}
+
+@mixin subtitulo-maiusculo() {
+    color: variaveis.$laranja;
+    font-family: "Jost", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    text-align: start;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 700px;
+    letter-spacing: 2px;
+}
+
+@mixin textos() {
+    font-family: variaveis.$font-textos;
+    font-size: 1rem;
+    font-weight: 300;
+    color: variaveis.$preto;
+    max-width: 500px;
+}
+
+@mixin botao() {
+    background-color: variaveis.$laranja;
+    border: none;
+    padding: .5rem;
+    width: 100%;
+    max-width: 700px;
+    color: white;
+    font-family: variaveis.$font-titulo;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+    display: block;
+    text-align: center;
+
+    &:hover {
+        background-color: white;
+        border: 1px solid variaveis.$laranja;
+        color: variaveis.$laranja;
+    }
+}
+
+@mixin esconderConteudo() {
+    position: absolute;
+    opacity: 0;
+    display: block;
+    width: 1px;
+    height: 1px;
+    top: 0;
+    left: 0;
+}
+
+@mixin flex-d-j-a($direcao, $justificar, $alinhamento) {
+    display: flex;
+    flex-direction: $direcao;
+    justify-content: $justificar;
+    align-items: $alinhamento;
+}
+
+@mixin links() {
+    color: variaveis.$preto;
+    font-weight: 400;
+    font-family: "Inter";
+    font-size: .9rem;
+    transition: .3s;
+    display: block;
+
+    &:hover {
+        color: variaveis.$laranja;
+    }
+}
+
+@mixin barrinha-menu() {
+    height: 2px;
+    width: 20px;
+    background-color: variaveis.$preto;
+    transition: .7s;
+    display: block;
+    position: absolute;
+}
+
+@mixin icone($caminho) {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-image: url($caminho);
+    background-repeat: no-repeat;
+    background-size: 64px;
+    position: absolute;
+    right: 0;
+    top: -4rem;
+}
+
+@mixin backgroundImage($caminho){
+    background-image: url($caminho);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

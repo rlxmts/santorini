@@ -1,0 +1,137 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.rodape {
+    .subir {
+        display: block;
+        background-color: #000;
+        height: 0px;
+        width: 30px;
+        position: fixed;
+        bottom: 100px;
+        right: 1.5rem;
+        border-radius: 3px;
+        transition: .5s;
+        background-image: url('../img/arrow-up.svg');
+        background-position: center;
+        background-size: contain;
+        cursor: pointer;
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    .subir-ativo {
+        height: 30px;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .div-wpp{
+        position: relative;
+        z-index: 9999;
+
+        .wpp {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #43a737;
+            position: fixed;
+            bottom: 30px;
+            right: 1.5rem;
+            border-radius: 50%;
+            box-shadow: 5px 5px -10px #000;
+            background-image: url('../img/wpp.png');
+            background-size: 25px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .wpp-msg{
+            @include mixins.flex-d-j-a(column, center, start);
+            transition: .7s;
+            opacity: 0;
+            transform: translateY(300px);
+            position: fixed;
+            bottom: 95px;
+            right: 1.5rem;
+            z-index: 9999;  
+            width: 300px;   
+            box-shadow: 0px 0px 10px #00000067;
+            border-radius: 10px;
+            z-index: 9999;
+            .span1{
+                border-radius: 10px 10px 0 0 ;
+                background-color: #43a737;
+                padding: 1rem;
+                width: 100%;
+                color: white;
+                font-weight: 500;
+            }
+            .span2{
+                background-color: white;
+                width: 100%;
+                padding: 1rem;
+                border-radius: 0 0 10px 10px;
+                color: variaveis.$verde;
+                strong{
+                    font-weight: 500;
+                    color: variaveis.$preto;
+                }
+            }
+        }
+        .wpp-msg-ativo{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    .botao-fechar-wpp{
+        color: transparent;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: #43a737;
+        position: fixed;
+        bottom: 250px;
+        right: 1.5rem;
+        border-radius: 50%;
+        background-image: url('../img/x.svg');
+        background-position: center;
+        background-size: 20px;
+        cursor: pointer;
+        transition: .7s;
+        opacity: 0;
+        transform: translateY(300px);
+    }
+
+    .botao-fechar-wpp-ativo {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .rodape {
+        .subir {
+            right: 1rem;
+            bottom: 70px;
+        }
+
+        .div-wpp{     
+            .wpp {
+                bottom: 10px;
+                right: 10px;
+            }
+    
+            .wpp-msg{
+                bottom: 70px;
+                right:10px;
+            }
+    
+            .botao-fechar-wpp{
+                bottom: 225px;
+                right: 10px;
+            }
+        }
+    }
+}

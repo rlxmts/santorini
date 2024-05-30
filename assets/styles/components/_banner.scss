@@ -1,0 +1,97 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.banner{
+    @include mixins.flex-d-j-a(column, center, center);
+    width: 100%;
+    height: 100svh;
+    background-image: url('../img/psicina.webp');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 !important;
+
+    
+
+    &_container{ 
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        .info{
+            @include mixins.flex-d-j-a(column, center, end);
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.856);
+            padding: 0 10%;
+            
+            img{
+                width: 150px;
+            }
+            
+            h1{
+                @include mixins.subtitulo-maiusculo();
+            }
+            h2{
+                @include mixins.titulo();
+                text-align: start;
+                font-weight: 400;
+            }
+            
+            a{
+                @extend h1;
+                color: variaveis.$laranja;
+                border-bottom: 1px solid variaveis.$laranja;
+            }
+        }
+        .imagens{
+            @include mixins.flex-d-j-a(row, normal, center);
+
+            img{
+                width: 80%;
+                transform: translateX(-25%);
+                box-shadow: 0px 0px 10px #00000042;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .banner{
+
+        &_container{
+            .info{
+                h2{
+                    font-size: 4rem;
+                    line-height: 5rem;
+                }
+            }
+            .imagens{
+                
+                    display: none;
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 668px){
+
+    .banner{
+        background-position:top;
+        
+        &_container{
+            height: 100%;
+            grid-template-columns: 1fr;
+            .info{
+                gap: 2rem;
+                background-color: #ffffffc9;
+                h2{
+                    font-size: 2.5rem;
+                    line-height: 3rem;
+                }
+            }
+        }
+    }
+}

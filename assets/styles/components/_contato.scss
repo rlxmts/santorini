@@ -1,0 +1,97 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.contato{
+    @include mixins.flex-d-j-a(row, center, start);
+
+    &_textos{
+        @include mixins.flex-d-j-a(column, start, end);
+        background-color: variaveis.$laranja;
+        padding: 5rem 5% 5rem 0;
+        width: 50%;
+        .contato-endereco{
+           span{
+               @include mixins.titulo();
+               color: white;
+               font-size: 3rem;text-align:end ;
+               width: 100%;
+           }
+
+           p{
+            @include mixins.textos();
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: white;
+            text-align: end;
+           }
+           
+           p:nth-child(3){
+            font-weight: 300;
+            font-size: 1rem;
+            margin-top: 1rem;
+           }
+        }
+
+        .contato-tel{
+            margin-top: 2rem;
+            span{
+                display: block;
+                width: 100%;
+                text-align:end ;  
+                font-size: 2rem;
+                color: white;
+            }
+
+            ul{
+                margin-top: 1rem;
+                a{
+                    display: block;
+                    width: 100%;
+                    color: white;
+                    text-align: end;
+                }
+            }
+            .contato-email{
+                font-size: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &_form{
+        padding: 5rem 0 5rem 5%;
+        width: 50%;
+        @include mixins.flex-d-j-a(column, start, start);
+        gap: 1rem;
+
+        h1{
+            @include mixins.titulo();
+            font-size: 3rem;
+            text-align: start;
+            color: variaveis.$preto;
+        }
+
+        label{
+            @include mixins.esconderConteudo();
+        }
+
+        input{
+            padding: .5rem 1rem;
+            border: none;
+            background-color: variaveis.$cinza-claro;
+            font-family: "Inter";
+            width: 100%;
+            max-width: 400px;
+        }
+
+        textarea{
+            @extend input;
+        }
+
+        button{
+            @include mixins.botao();
+            width: 200px;
+        }
+
+    }
+}

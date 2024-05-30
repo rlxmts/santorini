@@ -1,0 +1,252 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.produtos{
+    .divisor{
+        display: block;
+        padding: 3rem 0;
+        background-color: variaveis.$verde;
+        width: 100%;
+        text-align: center;
+        font-family: variaveis.$font-logo;
+        font-size: 3rem;
+        color: white;
+        box-shadow: 0px 0px 5px #000;
+    }
+    &_textos{
+        @include mixins.flex-d-j-a(column, center, center);
+        padding: 5rem 0;
+        height: 50vh;
+        h1{
+            @include mixins.subtitulo-maiusculo();
+            text-align: center;
+        }
+
+        p{
+            @include mixins.titulo();
+            max-width: 1000px;
+            font-size: 3rem;
+            line-height: 4rem;
+            text-align: center;
+        }
+    }
+
+    &_nav{        
+        ul{
+            background-color: variaveis.$verde;
+            
+            h3{
+                @include mixins.esconderConteudo();
+            }
+            
+            div{
+                @include mixins.container();
+                @include mixins.flex-d-j-a(row, center, center);
+                gap: 3rem;
+                padding: 3rem;
+                flex-wrap: wrap;
+                li{
+                    text-align: center;
+                    min-width: 70px;
+                    padding-top: 3rem;
+                    
+                    a{
+                        position: relative;
+                        @include mixins.links();
+                        color: white;
+
+                        &:hover{
+                            color: white;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+                li:nth-child(1) a::before{
+                    @include mixins.icone('../img/meeting.svg');
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40px;
+                    height:40px;
+                    top: -3rem;
+                    background-size: contain;
+                }
+                li:nth-child(2) a::before{
+                    @include mixins.icone('../img/restaurant.svg');
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40px;
+                    height:40px;
+                    top: -3rem;
+                    background-size: contain;
+                }
+                li:nth-child(3) a::before{
+                    @include mixins.icone('../img/bed.svg');
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40px;
+                    height:40px;
+                    top: -3rem;
+                    background-size: contain;
+                }
+                li:nth-child(4) a::before{
+                    @include mixins.icone('../img/cleaning.svg');
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40px;
+                    height:40px;
+                    top: -3rem;
+                    background-size: contain;
+                }
+                li:nth-child(5) a::before{
+                    @include mixins.icone('../img/burguer.svg');
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40px;
+                    height:40px;
+                    top: -3rem;
+                    background-size: contain;
+                }
+                li:nth-child(6) a::before{
+                    @include mixins.icone('../img/local.svg');
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40px;
+                    height:40px;
+                    top: -3rem;
+                    background-size: contain;
+                } 
+                li:nth-child(7) a::before{
+                    @include mixins.icone('../img/car.svg');
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40px;
+                    height:40px;
+                    top: -3rem;
+                    background-size: contain;
+                }
+                li:nth-child(8) a::before{
+                    @include mixins.icone('../img/factory.svg');
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40px;
+                    height:40px;
+                    top: -3rem;
+                    background-size: contain;
+                }
+                li:nth-child(9) a::before{
+                    @include mixins.icone('../img/dente.svg');
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40px;
+                    height:40px;
+                    top: -3rem;
+                    background-size: contain;
+                }
+                li:nth-child(10) a::before{
+                    @include mixins.icone('../img/bar.svg');
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40px;
+                    height:40px;
+                    top: -3rem;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+
+    &_cards{
+
+        li{
+            @include mixins.flex-d-j-a(row, center, center);
+            height: 600px;
+
+            .imagem-produtos{
+                display: block;
+                height: 100%;
+                width: 50%;
+            }
+            
+            div{
+                padding: 1rem;
+                width: 50%;
+                @include mixins.flex-d-j-a(column, center, center);
+                h4{
+                    @include mixins.subtitulo();
+                    color: variaveis.$verde;
+                    max-width: 500px;
+                }
+                p{
+                    @include mixins.textos();
+                    margin: 2rem 0;
+                }
+                a{
+                    @include mixins.botao();
+                    background-color: variaveis.$verde;
+                    border-radius: 5px;
+                    max-width: 500px;
+
+                    &:hover{
+                        background-color: variaveis.$laranja;
+                        color: white;
+                    }
+                }
+            }
+        }
+        li:nth-child(odd){ flex-direction: row-reverse; }
+        li:nth-child(1) .imagem-produtos{ @include mixins.backgroundImage('../img/produto.webp');}
+        li:nth-child(2) .imagem-produtos{ @include mixins.backgroundImage('../img/cozinha-produto.webp');}
+        li:nth-child(3) .imagem-produtos{ @include mixins.backgroundImage('../img/hotel-produto.webp');}
+        li:nth-child(4) .imagem-produtos{ @include mixins.backgroundImage('../img/piso-produto.webp');}
+        li:nth-child(5) .imagem-produtos{ @include mixins.backgroundImage('../img/higiene-produto.webp');}
+        li:nth-child(6) .imagem-produtos{@include mixins.backgroundImage('../img/lavanderia-produto.webp');}
+        li:nth-child(7) .imagem-produtos{ @include mixins.backgroundImage('../img/oficina-produto.webp');}
+        li:nth-child(8) .imagem-produtos{ @include mixins.backgroundImage('../img/industria-produto.webp');}
+        li:nth-child(9) .imagem-produtos{ @include mixins.backgroundImage('../img/dentista.webp');}
+        li:nth-child(10) .imagem-produtos{ @include mixins.backgroundImage('../img/industria-produto2.webp');}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .produtos{
+        &_textos{
+            padding: 10rem 1.5rem;
+            height: auto;
+
+            p{
+                font-size: 2rem;
+                line-height: 2.3rem;
+            }
+        }
+        &_nav{
+            div{
+                justify-content: space-around !important;
+            }
+        }
+        &_cards{
+            padding: 1.5rem;
+            li{
+                flex-direction: column;
+                border: 1px solid #DCDCDC;
+                margin-bottom: 1rem;
+                border-radius: 10px;
+            
+                div{
+                    width: 100%;
+                    padding:1.5rem;
+                }
+                .imagem-produtos{
+                    width: 100%;
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+            li:nth-child(1){ flex-direction: column;}
+            li:nth-child(3){ flex-direction: column;}
+            li:nth-child(5){ flex-direction: column;}
+            li:nth-child(7){ flex-direction: column;}
+            li:nth-child(9){ flex-direction: column;}
+        }
+    }
+}

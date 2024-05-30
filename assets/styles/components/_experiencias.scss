@@ -1,0 +1,85 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.experiencias{
+   
+    &_textos{
+        @include mixins.flex-d-j-a(column, center, center);
+        gap: 2rem;
+        padding: 10rem 1.5rem;
+        background-color: variaveis.$preto;
+        border-bottom: 3px solid variaveis.$laranja;
+        h3{
+            @include mixins.titulo();
+            font-size: 3rem;
+            color: white;
+            line-height: 3.5rem;
+        }
+        p{
+            @include mixins.textos();
+            color: white;
+            max-width: 800px;
+            text-align: center;
+        }
+    }
+
+    &_numeros{
+       background-color: variaveis.$laranja;
+       @include mixins.flex-d-j-a(row, center, center);
+       gap: 3rem;
+       padding: 10rem 1.5rem;
+       flex-wrap: wrap;
+
+       div{
+        min-width: 140px;
+            h5{
+                @include mixins.subtitulo-maiusculo();
+                font-size: 1rem;
+                text-align: center;
+                line-height: 1.3rem;
+                color: white;
+            }
+            span{
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 3rem;
+                color: white;
+            }
+
+            .clientes-numeros::before{
+                content: "+";
+            }
+       }
+    }  
+}
+
+@media screen and (max-width: 768px) {
+    
+    .experiencias{
+
+        &_textos{
+            padding: 5rem 1.5rem;
+
+            h3{
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+        }
+
+        &_numeros{
+            padding: 5rem 1.5rem ;
+            gap: 1rem;
+            row-gap: 2rem;
+
+            div{
+                width: 45%;
+                min-width: 100px;
+
+                h5{
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
