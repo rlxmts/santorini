@@ -1439,6 +1439,9 @@
   .rodape .rodape-copy span {
     max-width: 100%;
   }
+  .rodape_creditos {
+    padding-top: 2rem;
+  }
   .rodape_creditos span {
     text-align: center;
     width: 100%;
