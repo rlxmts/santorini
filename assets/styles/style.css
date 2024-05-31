@@ -1280,12 +1280,140 @@
   padding: 1rem 1.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: start;
   gap: 2rem;
   flex-wrap: wrap;
   border-bottom: 1px solid #686868;
   color: white;
+}
+.rodape_container div {
+  min-width: 190px;
+}
+.rodape_container .rodape-logo {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: white;
+  width: auto;
+}
+.rodape_container .rodape-explorar ul h5 {
+  color: #eb532c;
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: start;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 700px;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.rodape_container .rodape-explorar ul a {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #1b1d1f;
+  max-width: 500px;
+  color: white;
+  display: block;
+  margin-bottom: 0.5rem;
+  position: relative;
+  margin-left: 1rem;
+}
+.rodape_container .rodape-explorar ul a::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/arrow-right.svg");
+  position: absolute;
+  bottom: 0;
+  left: -1.5rem;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.rodape_container .rodape-politica h5 {
+  color: #eb532c;
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: start;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 700px;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.rodape_container .rodape-politica a {
+  color: white;
+  margin-left: 1rem;
+  position: relative;
+}
+.rodape_container .rodape-politica a::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/arrow-right.svg");
+  position: absolute;
+  bottom: 0;
+  left: -1.5rem;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.rodape_container .rodape-copy span {
+  font-size: 0.9rem;
+  display: block;
+  max-width: 200px;
+}
+.rodape_container .rodape-copy a {
+  position: absolute;
+  opacity: 0;
+  display: block;
+  width: 1px;
+  height: 1px;
+  top: 0;
+  left: 0;
+}
+.rodape_creditos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.rodape_creditos span {
+  display: block;
+  color: white;
+  font-size: 0.9rem;
+}
+.rodape_creditos .creditos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.rodape_creditos .creditos a {
+  text-align: center;
+  font-family: "Tenor Sans", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  width: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -1304,6 +1432,16 @@
   .rodape .div-wpp .botao-fechar-wpp {
     bottom: 225px;
     right: 10px;
+  }
+  .rodape .rodape-logo {
+    width: 100%;
+  }
+  .rodape .rodape-copy span {
+    max-width: 100%;
+  }
+  .rodape_creditos span {
+    text-align: center;
+    width: 100%;
   }
 }
 .clientes {

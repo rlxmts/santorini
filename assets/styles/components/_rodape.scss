@@ -115,13 +115,122 @@
 
     &_container{
         @include mixins.container();
-        @include mixins.flex-d-j-a(row, center, start);
+        @include mixins.flex-d-j-a(row, space-between, start);
         gap: 2rem;
         flex-wrap: wrap;
         border-bottom: 1px solid variaveis.$cinza;
         color: white;
 
-        
+        div{
+            min-width: 190px;
+        }
+
+        .rodape-logo{
+            @include mixins.logo();
+            width: auto;
+        }   
+
+        .rodape-explorar{
+
+            ul{
+                h5{
+                    @include mixins.subtitulo-maiusculo();
+                    color: white;
+                    margin-bottom: 1rem;
+                    font-weight: 600;
+                }
+    
+                a{
+                    @include mixins.textos();
+                    color: white;
+                    display: block;
+                    margin-bottom: .5rem;
+                    position: relative;
+                    margin-left: 1rem;
+
+                    &::before{
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        background-image: url('../img/arrow-right.svg');
+                        position: absolute;
+                        bottom: 0;
+                        left: -1.5rem;
+                        background-size: 15px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                }
+            }
+        }
+
+        .rodape-politica{
+             h5{
+                @include mixins.subtitulo-maiusculo();
+                color: white;
+                margin-bottom: 1rem;
+                font-weight: 600;
+             }
+             a{
+                color: white;
+                margin-left: 1rem;
+                position: relative;
+
+                &::before{
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    background-image: url('../img/arrow-right.svg');
+                    position: absolute;
+                    bottom: 0;
+                    left: -1.5rem;
+                    background-size: 15px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+             }
+        }
+
+        .rodape-copy{
+            span{
+                font-size: .9rem;
+                display: block;
+                max-width: 200px;
+            }
+            a{
+                @include mixins.esconderConteudo();
+            }
+        }
+    }
+
+    &_creditos{
+
+        @include mixins.flex-d-j-a(row, space-between, center);
+        @include mixins.container();
+        gap: 2rem;
+        flex-wrap: wrap;
+      
+        span{
+            display: block;
+            color: white;
+            font-size: .9rem;
+        }
+
+        .creditos{
+            @include mixins.flex-d-j-a(row, center, center);
+            gap: 1rem;
+            flex-wrap: wrap;
+    
+            a{
+                text-align: center;
+                font-family:"Tenor Sans", sans-serif ;
+                color: white;
+                font-size: 1.5rem;
+                width: auto;
+            }
+        }
+
     }
 }
 
@@ -148,6 +257,21 @@
             .botao-fechar-wpp{
                 bottom: 225px;
                 right: 10px;
+            }
+        }
+        .rodape-logo{
+            width: 100%;
+        }
+        .rodape-copy{
+            span{
+                max-width: 100%;
+            }
+        }
+
+        &_creditos{
+            span{
+                text-align: center;
+                width: 100%;
             }
         }
     }
