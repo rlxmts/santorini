@@ -564,13 +564,13 @@
 }
 .produtos .divisor {
   display: block;
-  padding: 3rem 0;
-  background-color: #0f5c4a;
   width: 100%;
   text-align: center;
   font-family: "Great Vibes", cursive;
   font-size: 3rem;
   color: white;
+  padding: 3rem 0;
+  background-color: #0f5c4a;
   box-shadow: 0px 0px 5px #000;
 }
 .produtos_textos {
@@ -1167,6 +1167,10 @@
     line-height: 3rem;
   }
 }
+.rodape {
+  background-color: #1b1d1f;
+  padding: 5rem 1.5rem;
+}
 .rodape .subir {
   display: block;
   background-color: #000;
@@ -1269,6 +1273,19 @@
 .rodape .botao-fechar-wpp-ativo {
   opacity: 1;
   transform: translateY(0px);
+}
+.rodape_container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #686868;
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -1399,15 +1416,15 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: start;
+  align-items: normal;
 }
 .contato_textos {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: end;
   background-color: #eb532c;
-  padding: 5rem 5% 5rem 0;
+  padding: 5rem 5% 5rem 1.5rem;
   width: 50%;
 }
 .contato_textos .contato-endereco span {
@@ -1465,12 +1482,12 @@
   margin-top: 1rem;
 }
 .contato_form {
-  padding: 5rem 0 5rem 5%;
-  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: start;
+  padding: 5rem 1.5rem 5rem 5%;
+  width: 50%;
   gap: 1rem;
 }
 .contato_form h1 {
@@ -1503,6 +1520,7 @@
   font-family: "Inter";
   width: 100%;
   max-width: 400px;
+  outline: none;
 }
 .contato_form button {
   background-color: #eb532c;
@@ -1523,4 +1541,30 @@
   background-color: white;
   border: 1px solid #eb532c;
   color: #eb532c;
+}
+
+@media screen and (max-width: 768px) {
+  .contato {
+    flex-direction: column;
+  }
+  .contato_textos {
+    width: 100%;
+    align-items: center;
+  }
+  .contato_textos .contato-endereco span, .contato_textos .contato-endereco p {
+    text-align: center;
+  }
+  .contato_textos .contato-tel span, .contato_textos .contato-tel ul li a {
+    text-align: center;
+  }
+  .contato_form {
+    width: 100%;
+    align-items: center;
+  }
+  .contato_form h1 {
+    text-align: center;
+  }
+  .contato_form button {
+    margin-top: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

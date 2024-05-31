@@ -2,12 +2,12 @@
 @use '../abstract/mixins';
 
 .contato{
-    @include mixins.flex-d-j-a(row, center, start);
+    @include mixins.flex-d-j-a(row, center, normal);
 
     &_textos{
-        @include mixins.flex-d-j-a(column, start, end);
+        @include mixins.flex-d-j-a(column, center, end);
         background-color: variaveis.$laranja;
-        padding: 5rem 5% 5rem 0;
+        padding: 5rem 5% 5rem 1.5rem;
         width: 50%;
         .contato-endereco{
            span{
@@ -59,9 +59,9 @@
     }
 
     &_form{
-        padding: 5rem 0 5rem 5%;
+        @include mixins.flex-d-j-a(column, center, start);
+        padding: 5rem 1.5rem 5rem 5%;
         width: 50%;
-        @include mixins.flex-d-j-a(column, start, start);
         gap: 1rem;
 
         h1{
@@ -82,6 +82,7 @@
             font-family: "Inter";
             width: 100%;
             max-width: 400px;
+            outline: none;
         }
 
         textarea{
@@ -93,5 +94,40 @@
             width: 200px;
         }
 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contato{
+        flex-direction: column;
+
+        &_textos{
+            width: 100%;
+            align-items: center;
+
+            .contato-endereco{
+                span, p{
+                    text-align: center;
+                }
+            }
+            .contato-tel{
+                span, ul li a{
+                    text-align: center;
+                }
+            }
+        }
+
+        &_form{
+            width: 100%;
+            align-items: center;
+
+            h1{
+                text-align: center;
+            }
+
+            button{
+                margin-top: 2rem;
+            }
+        }
     }
 }

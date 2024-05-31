@@ -2,6 +2,10 @@
 @use '../abstract/mixins';
 
 .rodape {
+
+    background-color: variaveis.$preto;
+    padding: 5rem 1.5rem;
+
     .subir {
         display: block;
         background-color: #000;
@@ -108,7 +112,20 @@
         opacity: 1;
         transform: translateY(0px);
     }
+
+    &_container{
+        @include mixins.container();
+        @include mixins.flex-d-j-a(row, center, start);
+        gap: 2rem;
+        flex-wrap: wrap;
+        border-bottom: 1px solid variaveis.$cinza;
+        color: white;
+
+        
+    }
 }
+
+
 
 @media screen and (max-width: 768px) {
     .rodape {
