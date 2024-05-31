@@ -1625,6 +1625,9 @@
 .contato_textos .contato-tel .contato-email {
   font-size: 1rem;
   margin-top: 1rem;
+  color: white;
+  display: block;
+  margin-top: 1rem;
 }
 .contato_form {
   display: flex;
