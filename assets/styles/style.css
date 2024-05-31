@@ -1483,6 +1483,7 @@
   font-size: 2rem;
   font-weight: 300;
   color: #eb532c;
+  font-family: "Inter", sans-serif;
   max-width: 600px;
   text-align: end;
 }
@@ -1492,7 +1493,6 @@
   font-weight: 300;
   color: #1b1d1f;
   max-width: 500px;
-  font-family: "Lora";
   text-align: end;
 }
 .clientes_img {
@@ -1527,10 +1527,11 @@
   .clientes {
     flex-direction: column;
     height: auto;
-    padding: 5rem 0;
+    padding-top: 5rem;
   }
   .clientes_container {
     width: 100%;
+    padding-bottom: 5rem;
   }
   .clientes_container .textos {
     align-items: center;
