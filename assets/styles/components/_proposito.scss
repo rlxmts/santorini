@@ -6,7 +6,6 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 2rem;
-    height: 80vh;
     padding: 5rem 1rem;
     h4{
         @include mixins.titulo();
