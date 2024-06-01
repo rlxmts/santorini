@@ -884,7 +884,18 @@
   max-width: 500px;
   margin: 2rem 0;
 }
-.produtos_cards li div a {
+.produtos_cards li div .produtos-botoes {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.produtos_cards li div .produtos-botoes a {
   background-color: #eb532c;
   border: none;
   padding: 0.5rem;
@@ -899,15 +910,26 @@
   text-align: center;
   background-color: #0f5c4a;
   border-radius: 5px;
-  max-width: 500px;
+  width: 48%;
+  min-width: 200px;
 }
-.produtos_cards li div a:hover {
+.produtos_cards li div .produtos-botoes a:hover {
   background-color: white;
   border: 1px solid #eb532c;
   color: #eb532c;
 }
-.produtos_cards li div a:hover {
+.produtos_cards li div .produtos-botoes a:hover {
   background-color: #eb532c;
+  color: white;
+}
+.produtos_cards li div .produtos-botoes a:nth-child(1) {
+  background-color: white;
+  color: #0f5c4a;
+  border: 1px solid #0f5c4a;
+  font-weight: 500;
+}
+.produtos_cards li div .produtos-botoes a:nth-child(1):hover {
+  background-color: #0f5c4a;
   color: white;
 }
 .produtos_cards li:nth-child(odd) {
@@ -1017,6 +1039,11 @@
   }
   .produtos_cards li:nth-child(9) {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 668px) {
+  .produtos-botoes a {
+    width: 100% !important;
   }
 }
 .experiencias_textos {

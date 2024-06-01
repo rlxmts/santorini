@@ -174,15 +174,37 @@
                     @include mixins.textos();
                     margin: 2rem 0;
                 }
-                a{
-                    @include mixins.botao();
-                    background-color: variaveis.$verde;
-                    border-radius: 5px;
-                    max-width: 500px;
 
-                    &:hover{
-                        background-color: variaveis.$laranja;
-                        color: white;
+                .produtos-botoes{
+                    width: 100%;
+                    max-width: 500px;
+                    @include mixins.flex-d-j-a(row, center,center);
+                    gap: 1rem;
+                    flex-wrap: wrap;
+                    padding: 0;
+                    a{
+                        @include mixins.botao();
+                        background-color: variaveis.$verde;
+                        border-radius: 5px;
+                        width: 48%;
+                        min-width: 200px;
+    
+                        &:hover{
+                            background-color: variaveis.$laranja;
+                            color: white;
+                        }
+                    }
+
+                    a:nth-child(1){
+                        background-color: white;
+                        color: variaveis.$verde;
+                        border: 1px solid variaveis.$verde ;
+                        font-weight: 500;
+
+                        &:hover{
+                            background-color: variaveis.$verde;
+                            color: white;
+                        }
                     }
                 }
             }
@@ -230,6 +252,7 @@
                     width: 100%;
                     padding:1.5rem;
                 }
+                
                 .imagem-produtos{
                     width: 100%;
                     border-radius: 10px 10px 0 0;
@@ -240,6 +263,14 @@
             li:nth-child(5){ flex-direction: column;}
             li:nth-child(7){ flex-direction: column;}
             li:nth-child(9){ flex-direction: column;}
+        }
+    }
+}
+
+@media screen and (max-width:668px) {
+    .produtos-botoes{
+        a{
+            width: 100% !important;
         }
     }
 }
