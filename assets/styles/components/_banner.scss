@@ -31,18 +31,26 @@
             
             h1{
                 @include mixins.subtitulo-maiusculo();
+                animation: surgir 1s ;
             }
             h2{
                 @include mixins.titulo();
                 text-align: start;
                 font-weight: 400;
+                animation: surgir 1s ;
             }
             
             a{
                 @extend h1;
                 color: variaveis.$laranja;
                 border-bottom: 1px solid variaveis.$laranja;
+                animation: surgir 1s ;
             }
+
+        }
+        @keyframes surgir {
+            0%{transform: translateX(30px); opacity: 0;}
+            100%{transform: translateX(0); opacity: 1;}
         }
         .imagens{
             @include mixins.flex-d-j-a(row, normal, center);

@@ -1,0 +1,10 @@
+.anima{
+    transform: translateY(30px);
+    opacity: 0;   
+    transition: 1s;
+}
+
+.anima-ativo{
+    transform: translateY(0);
+    opacity: 1;
+}

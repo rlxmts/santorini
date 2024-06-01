@@ -63,20 +63,29 @@ function esconderCabecalho(){
 //EVENTOS DE SCROLL NA PÁGINA. EFEITOS E TRANSIÇÕES
 window.addEventListener('scroll', debounce( ()=> {
      
-    animaElementos();
+    animaElementosAoScroll();
     alteraEstiloMenu();
     esconderCabecalho();
     ativaBotaoSubir();
-
+    
 }), 200);
 
-function animaElementos(){
-    const topWindow = window.scrollY + (window.innerHeight * 3) / 4; 
-    const posElemento = divNumeros.offsetTop;
+function animaElementosAoScroll(){
     
-    if(topWindow > posElemento){
-        iniciaRepeticao();
-    }  
+    const elementos = document.querySelectorAll('.anima');
+    const topWindow = window.scrollY + (window.innerHeight * 3) / 4; 
+    
+    elementos.forEach( item => {
+        const posicao = item.offsetTop;        
+        if(topWindow > posicao){
+            item.classList.add('anima-ativo')
+        }  
+        
+        const posicaoNumeros = divNumeros.offsetTop;
+        if(topWindow > posicaoNumeros){
+            iniciaRepeticao();
+        } 
+    })    
 }
 
 function alteraEstiloMenu(){
@@ -194,3 +203,12 @@ setTimeout( ()=> {
 }, 2000)
 
 botaoFecharPopup.onclick = ()=> abrirOuFecharPopupWpp();
+
+//ANIMANDO ELEMENTOS DA PÁGINA AO SCROLL
+
+function animaElementos(){    
+    const elementos = document.querySelectorAll('.anima');
+    elementos.forEach( item => {
+        item.classList.add('anima-ativo');
+    })
+}
