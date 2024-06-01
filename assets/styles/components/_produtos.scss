@@ -10,8 +10,8 @@
     }
     &_textos{
         @include mixins.flex-d-j-a(column, center, center);
-        padding: 5rem 0;
-        height: 50vh;
+        padding: 5rem 1.5rem;
+
         h1{
             @include mixins.subtitulo-maiusculo();
             text-align: center;
@@ -55,96 +55,16 @@
                     }
                 }
 
-                li:nth-child(1) a::before{
-                    @include mixins.icone('../img/meeting.svg');
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 40px;
-                    height:40px;
-                    top: -3rem;
-                    background-size: contain;
-                }
-                li:nth-child(2) a::before{
-                    @include mixins.icone('../img/restaurant.svg');
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 40px;
-                    height:40px;
-                    top: -3rem;
-                    background-size: contain;
-                }
-                li:nth-child(3) a::before{
-                    @include mixins.icone('../img/bed.svg');
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 40px;
-                    height:40px;
-                    top: -3rem;
-                    background-size: contain;
-                }
-                li:nth-child(4) a::before{
-                    @include mixins.icone('../img/cleaning.svg');
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 40px;
-                    height:40px;
-                    top: -3rem;
-                    background-size: contain;
-                }
-                li:nth-child(5) a::before{
-                    @include mixins.icone('../img/burguer.svg');
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 40px;
-                    height:40px;
-                    top: -3rem;
-                    background-size: contain;
-                }
-                li:nth-child(6) a::before{
-                    @include mixins.icone('../img/local.svg');
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 40px;
-                    height:40px;
-                    top: -3rem;
-                    background-size: contain;
-                } 
-                li:nth-child(7) a::before{
-                    @include mixins.icone('../img/car.svg');
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 40px;
-                    height:40px;
-                    top: -3rem;
-                    background-size: contain;
-                }
-                li:nth-child(8) a::before{
-                    @include mixins.icone('../img/factory.svg');
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 40px;
-                    height:40px;
-                    top: -3rem;
-                    background-size: contain;
-                }
-                li:nth-child(9) a::before{
-                    @include mixins.icone('../img/dente.svg');
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 40px;
-                    height:40px;
-                    top: -3rem;
-                    background-size: contain;
-                }
-                li:nth-child(10) a::before{
-                    @include mixins.icone('../img/bar.svg');
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 40px;
-                    height:40px;
-                    top: -3rem;
-                    background-size: contain;
-                }
+                li:nth-child(1) a::before{ @include mixins.iconeProdutos('../img/meeting.svg');}
+                li:nth-child(2) a::before{ @include mixins.iconeProdutos('../img/restaurant.svg');}
+                li:nth-child(3) a::before{ @include mixins.iconeProdutos('../img/bed.svg');}
+                li:nth-child(4) a::before{ @include mixins.iconeProdutos('../img/cleaning.svg');}
+                li:nth-child(5) a::before{ @include mixins.iconeProdutos('../img/burguer.svg');}
+                li:nth-child(6) a::before{ @include mixins.iconeProdutos('../img/local.svg');} 
+                li:nth-child(7) a::before{ @include mixins.iconeProdutos('../img/car.svg');}
+                li:nth-child(8) a::before{ @include mixins.iconeProdutos('../img/factory.svg');}
+                li:nth-child(9) a::before{ @include mixins.iconeProdutos('../img/dente.svg');}
+                li:nth-child(10) a::before{@include mixins.iconeProdutos('../img/bar.svg');}
             }
         }
     }
@@ -227,19 +147,19 @@
     
     .produtos{
         &_textos{
-            padding: 10rem 1.5rem;
-            height: auto;
 
             p{
                 font-size: 2rem;
                 line-height: 2.3rem;
             }
         }
+        
         &_nav{
             div{
                 justify-content: space-around !important;
             }
         }
+
         &_cards{
             padding: 1.5rem;
             li{

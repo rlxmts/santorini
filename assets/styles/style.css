@@ -591,8 +591,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0;
-  height: 50vh;
+  padding: 5rem 1.5rem;
 }
 .produtos_textos h1 {
   color: #eb532c;
@@ -669,182 +668,132 @@
 .produtos_nav ul div li:nth-child(1) a::before {
   content: "";
   display: block;
-  width: 64px;
-  height: 64px;
-  background-image: url("../img/meeting.svg");
-  background-repeat: no-repeat;
-  background-size: 64px;
-  position: absolute;
-  right: 0;
-  top: -4rem;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
   top: -3rem;
+  background-image: url("../img/meeting.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 .produtos_nav ul div li:nth-child(2) a::before {
   content: "";
   display: block;
-  width: 64px;
-  height: 64px;
-  background-image: url("../img/restaurant.svg");
-  background-repeat: no-repeat;
-  background-size: 64px;
-  position: absolute;
-  right: 0;
-  top: -4rem;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
   top: -3rem;
+  background-image: url("../img/restaurant.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 .produtos_nav ul div li:nth-child(3) a::before {
   content: "";
   display: block;
-  width: 64px;
-  height: 64px;
-  background-image: url("../img/bed.svg");
-  background-repeat: no-repeat;
-  background-size: 64px;
-  position: absolute;
-  right: 0;
-  top: -4rem;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
   top: -3rem;
+  background-image: url("../img/bed.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 .produtos_nav ul div li:nth-child(4) a::before {
   content: "";
   display: block;
-  width: 64px;
-  height: 64px;
-  background-image: url("../img/cleaning.svg");
-  background-repeat: no-repeat;
-  background-size: 64px;
-  position: absolute;
-  right: 0;
-  top: -4rem;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
   top: -3rem;
+  background-image: url("../img/cleaning.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 .produtos_nav ul div li:nth-child(5) a::before {
   content: "";
   display: block;
-  width: 64px;
-  height: 64px;
-  background-image: url("../img/burguer.svg");
-  background-repeat: no-repeat;
-  background-size: 64px;
-  position: absolute;
-  right: 0;
-  top: -4rem;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
   top: -3rem;
+  background-image: url("../img/burguer.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 .produtos_nav ul div li:nth-child(6) a::before {
   content: "";
   display: block;
-  width: 64px;
-  height: 64px;
-  background-image: url("../img/local.svg");
-  background-repeat: no-repeat;
-  background-size: 64px;
-  position: absolute;
-  right: 0;
-  top: -4rem;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
   top: -3rem;
+  background-image: url("../img/local.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 .produtos_nav ul div li:nth-child(7) a::before {
   content: "";
   display: block;
-  width: 64px;
-  height: 64px;
-  background-image: url("../img/car.svg");
-  background-repeat: no-repeat;
-  background-size: 64px;
-  position: absolute;
-  right: 0;
-  top: -4rem;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
   top: -3rem;
+  background-image: url("../img/car.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 .produtos_nav ul div li:nth-child(8) a::before {
   content: "";
   display: block;
-  width: 64px;
-  height: 64px;
-  background-image: url("../img/factory.svg");
-  background-repeat: no-repeat;
-  background-size: 64px;
-  position: absolute;
-  right: 0;
-  top: -4rem;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
   top: -3rem;
+  background-image: url("../img/factory.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 .produtos_nav ul div li:nth-child(9) a::before {
   content: "";
   display: block;
-  width: 64px;
-  height: 64px;
-  background-image: url("../img/dente.svg");
-  background-repeat: no-repeat;
-  background-size: 64px;
-  position: absolute;
-  right: 0;
-  top: -4rem;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
   top: -3rem;
+  background-image: url("../img/dente.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 .produtos_nav ul div li:nth-child(10) a::before {
   content: "";
   display: block;
-  width: 64px;
-  height: 64px;
-  background-image: url("../img/bar.svg");
-  background-repeat: no-repeat;
-  background-size: 64px;
-  position: absolute;
-  right: 0;
-  top: -4rem;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
   top: -3rem;
+  background-image: url("../img/bar.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 .produtos_cards li {
   display: flex;
@@ -997,10 +946,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .produtos_textos {
-    padding: 10rem 1.5rem;
-    height: auto;
-  }
   .produtos_textos p {
     font-size: 2rem;
     line-height: 2.3rem;
