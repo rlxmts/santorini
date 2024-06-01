@@ -35,6 +35,8 @@
             }
             h2{
                 @include mixins.titulo();
+                font-size: 5rem;
+                line-height: 5rem;
                 text-align: start;
                 font-weight: 400;
                 animation: surgir 1s ;

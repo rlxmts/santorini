@@ -13,8 +13,9 @@
            span{
                @include mixins.titulo();
                color: white;
-               font-size: 3rem;text-align:end ;
+               text-align:end ;
                width: 100%;
+               margin-bottom: 2rem;
            }
 
 
@@ -71,7 +72,6 @@
 
         h1{
             @include mixins.titulo();
-            font-size: 3rem;
             text-align: start;
             color: variaveis.$preto;
         }

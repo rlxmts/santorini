@@ -10,8 +10,6 @@
     padding: 5rem 1rem;
     h4{
         @include mixins.titulo();
-        font-size: 3rem;
-        line-height: 3.5rem;
         text-align: end;
         justify-self: end;
     }

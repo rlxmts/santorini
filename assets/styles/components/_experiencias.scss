@@ -11,9 +11,7 @@
         border-bottom: 3px solid variaveis.$laranja;
         h3{
             @include mixins.titulo();
-            font-size: 3rem;
             color: white;
-            line-height: 3.5rem;
         }
         p{
             @include mixins.textos();

@@ -274,12 +274,14 @@
   width: 100%;
   max-width: 700px;
   font-family: "Jost", sans-serif;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 300;
   color: #1b1d1f;
-  line-height: 6rem;
+  line-height: 3.5rem;
   text-align: center;
   display: block;
+  font-size: 5rem;
+  line-height: 5rem;
   text-align: start;
   font-weight: 400;
   animation: surgir 1s;
@@ -349,14 +351,12 @@
   width: 100%;
   max-width: 700px;
   font-family: "Jost", sans-serif;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 300;
   color: #1b1d1f;
-  line-height: 6rem;
+  line-height: 3.5rem;
   text-align: center;
   display: block;
-  font-size: 3rem;
-  line-height: 3.5rem;
   text-align: end;
   justify-self: end;
 }
@@ -611,15 +611,13 @@
   width: 100%;
   max-width: 700px;
   font-family: "Jost", sans-serif;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 300;
   color: #1b1d1f;
-  line-height: 6rem;
+  line-height: 3.5rem;
   text-align: center;
   display: block;
   max-width: 1000px;
-  font-size: 3rem;
-  line-height: 4rem;
   text-align: center;
 }
 .produtos_nav ul {
@@ -1035,15 +1033,13 @@
   width: 100%;
   max-width: 700px;
   font-family: "Jost", sans-serif;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 300;
   color: #1b1d1f;
-  line-height: 6rem;
+  line-height: 3.5rem;
   text-align: center;
   display: block;
-  font-size: 3rem;
   color: white;
-  line-height: 3.5rem;
 }
 .experiencias_textos p {
   font-family: "Inter", sans-serif;
@@ -1143,14 +1139,12 @@
   width: 100%;
   max-width: 700px;
   font-family: "Jost", sans-serif;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 300;
   color: #1b1d1f;
-  line-height: 6rem;
+  line-height: 3.5rem;
   text-align: center;
   display: block;
-  font-size: 4rem;
-  line-height: 4.5rem;
   margin: 1rem 0 3rem 0;
 }
 .chamada a {
@@ -1589,16 +1583,16 @@
   width: 100%;
   max-width: 700px;
   font-family: "Jost", sans-serif;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 300;
   color: #1b1d1f;
-  line-height: 6rem;
+  line-height: 3.5rem;
   text-align: center;
   display: block;
   color: white;
-  font-size: 3rem;
   text-align: end;
   width: 100%;
+  margin-bottom: 2rem;
 }
 .contato_textos .contato-endereco p {
   font-family: "Inter", sans-serif;
@@ -1655,13 +1649,12 @@
   width: 100%;
   max-width: 700px;
   font-family: "Jost", sans-serif;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 300;
   color: #1b1d1f;
-  line-height: 6rem;
+  line-height: 3.5rem;
   text-align: center;
   display: block;
-  font-size: 3rem;
   text-align: start;
   color: #1b1d1f;
 }

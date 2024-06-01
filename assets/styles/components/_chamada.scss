@@ -13,8 +13,6 @@
     }
     p{
         @include mixins.titulo();
-        font-size: 4rem;
-        line-height: 4.5rem;
         margin: 1rem 0 3rem 0;
     }
     a{
