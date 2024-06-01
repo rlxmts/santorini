@@ -344,7 +344,7 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 2rem;
-  padding: 5rem 1rem;
+  padding: 10rem 1rem;
 }
 .proposito h4 {
   width: 100%;
@@ -385,8 +385,8 @@
 
 @media screen and (max-width: 768px) {
   .proposito {
-    height: auto;
     grid-template-columns: 1fr;
+    padding: 5rem 1.5rem;
   }
   .proposito h4 {
     justify-self: start;
