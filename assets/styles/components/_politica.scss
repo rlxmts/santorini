@@ -1,0 +1,36 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.politica{
+    @include mixins.container();
+    padding: 10rem 1.5rem 5rem 1.5rem;
+
+    h2{
+        @include mixins.titulo();
+        text-align: start;
+        margin-bottom: 1rem;
+
+        }
+        
+    h3{
+        @include mixins.subtitulo-maiusculo();
+        margin-top: 1rem;
+    }
+            
+    p, li{
+        font-family: "Lora";
+        max-width: 100%;
+        margin-bottom: 1rem ;
+    }
+}
+                   
+@media screen and (max-width:768px) {
+    .politica{
+        padding: 5rem 1.5rem;
+
+        h2{
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+    }                        
+}
