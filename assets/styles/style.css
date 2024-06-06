@@ -1478,6 +1478,7 @@
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  width: 100%;
   flex-wrap: nowrap;
   overflow: hidden;
   max-width: 500px;
@@ -1505,7 +1506,7 @@
 .clientes_img {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 3rem 0;
   width: 50%;
@@ -1514,7 +1515,7 @@
 .clientes_img::after {
   content: "";
   display: block;
-  width: 50%;
+  width: 80%;
   height: 100%;
   position: absolute;
   background-color: #0f5c4a;
@@ -1522,7 +1523,7 @@
 }
 .clientes_img img {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   z-index: 1;
 }
 
