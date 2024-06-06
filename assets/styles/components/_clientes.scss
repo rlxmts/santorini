@@ -97,7 +97,8 @@
 
             .imagens_container{
                 max-width: 100%;
-                .imagens{                    
+                .imagens{           
+                    gap: 1.5rem;         
                     img{
                         width: 70px;
                     }

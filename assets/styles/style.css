@@ -1550,6 +1550,9 @@
   .clientes_container .imagens_container {
     max-width: 100%;
   }
+  .clientes_container .imagens_container .imagens {
+    gap: 1.5rem;
+  }
   .clientes_container .imagens_container .imagens img {
     width: 70px;
   }
