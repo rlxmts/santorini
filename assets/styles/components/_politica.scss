@@ -22,6 +22,11 @@
         max-width: 100%;
         margin-bottom: 1rem ;
     }
+
+    a{
+        font-weight: 500;
+        color: variaveis.$laranja;
+    }
 }
                    
 @media screen and (max-width:768px) {

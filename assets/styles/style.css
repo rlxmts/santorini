@@ -1767,6 +1767,10 @@
   max-width: 100%;
   margin-bottom: 1rem;
 }
+.politica a {
+  font-weight: 500;
+  color: #eb532c;
+}
 
 @media screen and (max-width: 768px) {
   .politica {
