@@ -4,12 +4,12 @@
 .clientes{
     @include mixins.flex-d-j-a(row, center, center);
     width: 100%;
+    padding: 10em 1.5em;
     background-color: variaveis.$cinza-claro;
-    height: 80svh;
 
     &_container{
         @include mixins.container();
-        @include mixins.flex-d-j-a(column, center, center);
+        @include mixins.flex-d-j-a(column, center, end);
         width: 50%;
         
         .textos{
@@ -24,6 +24,29 @@
             p{
                 @include mixins.textos();
                 text-align: end;
+            }
+        }
+
+        .imagens_container{
+            @include mixins.flex-d-j-a(row, start, center);
+            
+            flex-wrap: nowrap;
+            overflow: hidden;
+            max-width: 500px;
+            margin-top: 3rem;
+            .imagens{
+                @include mixins.flex-d-j-a(row, start, center);
+                gap: 1rem;
+                animation: 30s slide infinite linear;
+                
+                img{
+                    width: 100px;
+                }
+            }
+
+            @keyframes slide {
+                0%{ transform: translateX(0);}
+                100%{transform: translateX(-100%);}
             }
         }
     }
