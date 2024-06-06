@@ -89,7 +89,7 @@
 
         &_container{
             width: 100%;
-            padding-bottom: 5rem;
+            padding:0 0 5rem 0;
             .textos{
                 align-items: center;
                 h2{
@@ -98,6 +98,17 @@
                 p{
                     text-align: center;
                     width: 100%;
+                }
+            }
+
+            .imagens_container{
+                max-width: 100%;
+
+                .imagens{
+
+                    img{
+                        width: 70px;
+                    }
                 }
             }
         }

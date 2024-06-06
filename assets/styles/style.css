@@ -1538,7 +1538,7 @@
   }
   .clientes_container {
     width: 100%;
-    padding-bottom: 5rem;
+    padding: 0 0 5rem 0;
   }
   .clientes_container .textos {
     align-items: center;
@@ -1549,6 +1549,12 @@
   .clientes_container .textos p {
     text-align: center;
     width: 100%;
+  }
+  .clientes_container .imagens_container {
+    max-width: 100%;
+  }
+  .clientes_container .imagens_container .imagens img {
+    width: 70px;
   }
   .clientes_img {
     width: 100%;
