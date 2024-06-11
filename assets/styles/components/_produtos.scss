@@ -118,13 +118,13 @@
             }
         }
         li:nth-child(odd){ flex-direction: row-reverse; }
-        li:nth-child(1) .imagem-produtos{ @include mixins.backgroundImage('../img/produto.webp');}
-        li:nth-child(2) .imagem-produtos{ @include mixins.backgroundImage('../img/cozinha-produto.webp');}
+        li:nth-child(1) .imagem-produtos{ @include mixins.backgroundImage('../img/institucional.webp');}
+        li:nth-child(2) .imagem-produtos{ @include mixins.backgroundImage('../img/alimenticia.webp');}
         li:nth-child(3) .imagem-produtos{ @include mixins.backgroundImage('../img/hotel-produto.webp');}
         li:nth-child(4) .imagem-produtos{ @include mixins.backgroundImage('../img/piso-produto.webp');}
-        li:nth-child(5) .imagem-produtos{ @include mixins.backgroundImage('../img/higiene-produto.webp');}
+        li:nth-child(5) .imagem-produtos{ @include mixins.backgroundImage('../img/cozinha-produto.webp');}
         li:nth-child(6) .imagem-produtos{@include mixins.backgroundImage('../img/lavanderia-produto.webp');}
-        li:nth-child(7) .imagem-produtos{ @include mixins.backgroundImage('../img/oficina-produto.webp');}
+        li:nth-child(7) .imagem-produtos{ @include mixins.backgroundImage('../img/carro.webp');}
         li:nth-child(8) .imagem-produtos{ @include mixins.backgroundImage('../img/industria-produto.webp');}
         li:nth-child(9) .imagem-produtos{ @include mixins.backgroundImage('../img/dentista.webp');}
         li:nth-child(10) .imagem-produtos{ @include mixins.backgroundImage('../img/industria-produto2.webp');}

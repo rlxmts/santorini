@@ -886,13 +886,13 @@
   flex-direction: row-reverse;
 }
 .produtos_cards li:nth-child(1) .imagem-produtos {
-  background-image: url("../img/produto.webp");
+  background-image: url("../img/institucional.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .produtos_cards li:nth-child(2) .imagem-produtos {
-  background-image: url("../img/cozinha-produto.webp");
+  background-image: url("../img/alimenticia.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -910,7 +910,7 @@
   background-size: cover;
 }
 .produtos_cards li:nth-child(5) .imagem-produtos {
-  background-image: url("../img/higiene-produto.webp");
+  background-image: url("../img/cozinha-produto.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -922,7 +922,7 @@
   background-size: cover;
 }
 .produtos_cards li:nth-child(7) .imagem-produtos {
-  background-image: url("../img/oficina-produto.webp");
+  background-image: url("../img/carro.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1048,7 +1048,7 @@
   width: 100%;
   max-width: 700px;
   letter-spacing: 2px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: center;
   line-height: 1.3rem;
   color: white;
@@ -1082,7 +1082,7 @@
     min-width: 100px;
   }
   .experiencias_numeros div h5 {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 .chamada {
