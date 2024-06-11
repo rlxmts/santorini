@@ -12,6 +12,7 @@
     width: 100%;
     z-index: 9999;
     transition: .5s;
+    background-color: #ffffffd4;
 
     &_container {
         height: 90px;
@@ -50,7 +51,7 @@
 }
 
 .cabecalho-scroll{
-    background-color: white;
+    background-color: #FFF !important;
     box-shadow: 0px -10px 15px #000;
 }
 

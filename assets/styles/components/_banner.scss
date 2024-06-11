@@ -24,7 +24,7 @@
             justify-content: center;
             background-color: rgba(255, 255, 255, 0.856);
             padding: 0 10%;
-            
+            gap: 1rem;
             img{
                 width: 150px;
             }
@@ -35,8 +35,8 @@
             }
             h2{
                 @include mixins.titulo();
-                font-size: 4rem;
-                line-height: 4rem;
+                font-size: 5rem;
+                line-height: 5rem;
                 text-align: start;
                 font-weight: 400;
                 animation: surgir 1s ;
@@ -47,6 +47,14 @@
                 color: variaveis.$laranja;
                 border-bottom: 1px solid variaveis.$laranja;
                 animation: surgir 1s ;
+                margin-top: 1rem;
+                transition: .5s;
+
+                &:hover{
+                    color: variaveis.$verde;
+                    border-color: variaveis.$verde;
+                    transform: scale(1.01);
+                }
             }
 
         }

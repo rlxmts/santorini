@@ -61,6 +61,7 @@
   width: 100%;
   z-index: 9999;
   transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.831372549);
 }
 .cabecalho_container {
   height: 90px;
@@ -105,7 +106,7 @@
 }
 
 .cabecalho-scroll {
-  background-color: white;
+  background-color: #FFF !important;
   box-shadow: 0px -10px 15px #000;
 }
 
@@ -256,6 +257,7 @@
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.856);
   padding: 0 10%;
+  gap: 1rem;
 }
 .banner_container .info img {
   width: 150px;
@@ -283,8 +285,8 @@
   line-height: 3.5rem;
   text-align: center;
   display: block;
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: 5rem;
+  line-height: 5rem;
   text-align: start;
   font-weight: 400;
   animation: surgir 1s;
@@ -293,6 +295,13 @@
   color: #eb532c;
   border-bottom: 1px solid #eb532c;
   animation: surgir 1s;
+  margin-top: 1rem;
+  transition: 0.5s;
+}
+.banner_container .info a:hover {
+  color: #0f5c4a;
+  border-color: #0f5c4a;
+  transform: scale(1.01);
 }
 @keyframes surgir {
   0% {
@@ -513,7 +522,6 @@
 .diferenciais {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 50vh;
 }
 .diferenciais_img {
   display: block;
@@ -535,8 +543,9 @@
   justify-content: center;
   align-items: start;
   padding-left: 2rem;
-  background-color: #eb532c;
   height: 100%;
+  padding: 5rem 1.5rem;
+  background-color: #eb532c;
 }
 .diferenciais_textos h2 {
   color: #eb532c;
@@ -587,6 +596,7 @@
   padding: 3rem 0;
   background-color: #0f5c4a;
   box-shadow: 0px 0px 5px #000;
+  font-size: 4rem;
 }
 .produtos_textos {
   display: flex;
