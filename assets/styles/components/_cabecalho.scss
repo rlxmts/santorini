@@ -18,13 +18,14 @@
         transition: .5s;
         @include mixins.container();
         @include mixins.flex-d-j-a(row, space-between, center);
-
+        
         h1 {
+            height: 100%;
             a {
                 font-family: variaveis.$font-logo;
-                font-size: 3rem;
-                color: variaveis.$preto;
-            }
+                font-size: 4rem;
+                color: variaveis.$laranja;
+                }
         }
 
         nav {

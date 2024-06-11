@@ -106,23 +106,10 @@
                         @include mixins.botao();
                         background-color: variaveis.$verde;
                         border-radius: 5px;
-                        width: 48%;
-                        min-width: 200px;
+                        width: 100%;
     
                         &:hover{
                             background-color: variaveis.$laranja;
-                            color: white;
-                        }
-                    }
-
-                    a:nth-child(1){
-                        background-color: white;
-                        color: variaveis.$verde;
-                        border: 1px solid variaveis.$verde ;
-                        font-weight: 500;
-
-                        &:hover{
-                            background-color: variaveis.$verde;
                             color: white;
                         }
                     }
