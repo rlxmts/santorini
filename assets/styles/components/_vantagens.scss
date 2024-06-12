@@ -13,7 +13,7 @@
             li{
                 margin-top: 3rem ;
                 position: relative;
-                h3{
+                h4{
                     @include mixins.subtitulo();
                     color: variaveis.$laranja;
                     font-size: 1.5rem;
