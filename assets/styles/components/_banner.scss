@@ -23,7 +23,8 @@
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.863) 50%, rgba(255, 255, 255, 0.507) 100%);
         
         .info{
-            @include mixins.flex-d-j-a(column, center, start);
+            @include mixins.flex-d-j-a(column, center, center);
+            text-align: center;
             justify-content: center;
             padding: 0 10%;
             gap: 1rem;
@@ -34,12 +35,13 @@
             h1{
                 @include mixins.subtitulo-maiusculo();
                 animation: surgir 1s ;
+                text-align: center;
             }
             h2{
                 @include mixins.titulo();
                 font-size: 5rem;
-                line-height: 5rem;
-                text-align: start;
+                line-height: 5.5rem;
+                text-align: center;
                 font-weight: 300;
                 animation: surgir 1s ;
                 max-width: 900px;
@@ -49,6 +51,7 @@
                 @extend h1;
                 color: variaveis.$laranja;
                 border-bottom: 1px solid variaveis.$laranja;
+                width: fit-content;
                 animation: surgir 1s ;
                 margin-top: 1rem;
                 transition: .5s;

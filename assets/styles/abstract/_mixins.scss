@@ -100,7 +100,7 @@
     color: variaveis.$preto;
     font-weight: 400;
     font-family: "Inter";
-    font-size: 1rem;
+    font-size: .9rem;
     transition: .3s;
     display: block;
     letter-spacing: 2px;
@@ -108,7 +108,7 @@
     &:hover {
         color: variaveis.$laranja;
     }
-}
+}   
 
 @mixin barrinha-menu() {
     height: 2px;
