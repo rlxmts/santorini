@@ -14,3 +14,105 @@
         @include mixins.subtitulo-maiusculo();
     }
 }
+
+.sobre{
+    @include mixins.flex-d-j-a(row, center, center);
+    gap: 3rem;
+    @include mixins.container();
+    padding: 10rem 1.5rem ;
+
+    &_texto{
+        max-width: 60%;
+        h2{
+            @include mixins.titulo();
+            text-align: start;
+            color: variaveis.$laranja;
+            margin-bottom: 2rem;
+        }
+        p{
+            @include mixins.textos();
+            max-width: 700px;
+            font-size: 1.1rem;
+            font-family: "Lora";
+            line-height: 25px;
+        }
+    }
+
+    &_imagem{
+        width: 40%;
+        position: relative;
+        @include mixins.flex-d-j-a(row, center, center);
+        img{
+            position: relative;
+            z-index: 99;
+            width: 100%;
+            box-shadow: 3px 3px 3px #000000a1 ;
+        }
+
+        &::before{
+            content: '';
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: variaveis.$laranja;
+            position: absolute;
+            border-radius: 75px 75px 0 0;
+            top: -50px;
+            left: -20px;
+            z-index: 1;
+        }
+        &::after{
+            content: '';
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: variaveis.$laranja;
+            position: absolute;
+            border-radius: 0 0 75px 75px;
+            bottom: -50px;
+            right: -20px;
+            z-index: 1;
+        }
+    }
+}
+
+.sobre-proposito{
+    background-color: variaveis.$laranja;
+    div{
+        @include mixins.container();
+        padding: 10rem 1.5rem;
+
+        ul{
+            @include mixins.flex-d-j-a(column, center, start);
+            gap: 2rem;
+
+            li{
+                @include mixins.flex-d-j-a(column, start, start);
+                width: 100%;
+                h3{
+                    @include mixins.titulo();
+                    color: #FFFF;
+                    text-align: start;
+                    margin-bottom: 1rem;
+                }
+                p{
+                    @include mixins.textos();
+                    color: #FFFF;
+                }
+            }
+
+            li:nth-child(2){
+                align-items: end;
+                h3{
+                    max-width: 500px;
+                }
+            }
+            li:nth-child(4){
+                align-items: end;
+                h3{
+                    max-width: 500px;
+                }
+            }
+        }
+    }
+}
