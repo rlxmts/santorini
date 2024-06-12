@@ -1,0 +1,16 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.banner-sobre{
+    height: 50vh;
+    @include mixins.backgroundImage('../img/ofice.webp');
+    @include mixins.flex-d-j-a(column, center, center);
+    background-position:center; 
+    
+    h1{
+        @include mixins.titulo();
+    }
+    h2{
+        @include mixins.subtitulo-maiusculo();
+    }
+}
