@@ -48,6 +48,8 @@
                         position: relative;
                         @include mixins.links();
                         color: white;
+                        letter-spacing: normal;
+                        font-size: .9rem;
 
                         &:hover{
                             color: white;

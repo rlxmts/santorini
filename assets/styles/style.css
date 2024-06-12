@@ -676,6 +676,8 @@
   display: block;
   letter-spacing: 2px;
   color: white;
+  letter-spacing: normal;
+  font-size: 0.9rem;
 }
 .produtos_nav div ul li a:hover {
   color: #eb532c;
