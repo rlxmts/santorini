@@ -100,9 +100,10 @@
     color: variaveis.$preto;
     font-weight: 400;
     font-family: "Inter";
-    font-size: .9rem;
+    font-size: 1rem;
     transition: .3s;
     display: block;
+    letter-spacing: 2px;
 
     &:hover {
         color: variaveis.$laranja;
