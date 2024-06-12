@@ -29,7 +29,7 @@
         div{
             background-color: variaveis.$verde;
             
-            h3{
+            h4{
                 @include mixins.esconderConteudo();
             }
             
