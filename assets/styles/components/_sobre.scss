@@ -116,3 +116,30 @@
         }
     }
 }
+
+
+@media screen and (max-width:1024px) {
+    .sobre{
+        flex-direction: column;
+        gap: 5rem;
+        padding: 5rem 1.5rem;
+        &_texto{
+            max-width: 100%;
+        }
+        &_imagem{
+            max-width: 500px;
+            min-width: 300px;
+
+            &::before{
+                width: 100px;
+                height: 100px;
+                top: -30px;
+            }
+            &::after{
+                width: 100px;
+                height: 100px;
+                bottom: -30px;
+            }
+        }
+    }
+}
