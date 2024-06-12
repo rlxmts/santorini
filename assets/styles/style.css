@@ -1625,6 +1625,19 @@
   color: white;
   text-align: end;
 }
+.contato_textos .contato-tel .contato-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+.contato_textos .contato-tel .contato-social li {
+  width: 20px;
+}
+.contato_textos .contato-tel .contato-social li img {
+  width: 100%;
+}
 .contato_textos .contato-tel .contato-email {
   font-size: 1rem;
   margin-top: 1rem;
@@ -1706,6 +1719,9 @@
   }
   .contato_textos .contato-tel span, .contato_textos .contato-tel ul li a {
     text-align: center;
+  }
+  .contato_textos .contato-tel .contato-social {
+    justify-content: center;
   }
   .contato_form {
     width: 100%;

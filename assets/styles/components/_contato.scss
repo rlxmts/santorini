@@ -54,6 +54,18 @@
                     text-align: end;
                 }
             }
+            .contato-social{
+                @include mixins.flex-d-j-a(row, end, center);
+                gap: 1rem;
+
+                li{
+                    width: 20px;
+                    
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
             .contato-email{
                 font-size: 1rem;
                 margin-top: 1rem;
@@ -118,6 +130,9 @@
             .contato-tel{
                 span, ul li a{
                     text-align: center;
+                }
+                .contato-social{
+                    justify-content: center;
                 }
             }
         }
