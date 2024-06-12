@@ -155,14 +155,23 @@
                 border: 1px solid #DCDCDC;
                 margin-bottom: 1rem;
                 border-radius: 10px;
-            
+                height: auto;
                 div{
                     width: 100%;
                     padding:1.5rem;
+
+                    h4{
+                        font-size: 1.5rem;
+                    }
+
+                    p{
+                        margin: 1rem 0;
+                    }
                 }
                 
                 .imagem-produtos{
                     width: 100%;
+                    height: 200px;
                     border-radius: 10px 10px 0 0;
                 }
             }
