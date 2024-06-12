@@ -226,6 +226,11 @@
   }
 }
 @media screen and (max-width: 668px) {
+  .cabecalho h1 {
+    height: auto;
+    display: block;
+    margin-bottom: -10px;
+  }
   .cabecalho nav ul li a {
     font-size: 1.5rem;
   }
@@ -1945,6 +1950,7 @@
   align-items: start;
   max-width: 450px;
   border-left: 3px solid white;
+  border-radius: 3px;
   padding-left: 1rem;
 }
 .sobre-proposito div ul li h3 {

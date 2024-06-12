@@ -93,6 +93,7 @@
                 @include mixins.flex-d-j-a(column, start, start);
                 max-width: 450px;
                 border-left: 3px solid #FFFF;
+                border-radius: 3px;
                 padding-left: 1rem;
                 h3{
                     @include mixins.subtitulo();
