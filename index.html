@@ -387,21 +387,43 @@
                     </ul>
                 </div>
             </div>
-            <form action="" class="contato_form">
+            <form method="post" action="./email.php" class="contato_form" id="formulario">
                 <h1 class="anima">Contato</h1>
                 <label for="nome">Nome:</label>
-                <input  class="anima" type="text" placeholder="Nome" id="nome" required>
+                <input  
+                    class="anima" 
+                    type="text" 
+                    placeholder="Nome" 
+                    id="nome" 
+                    name="name" 
+                    required
+                >
 
                 <label for="email">E-mail:</label>
-                <input  class="anima" type="email" placeholder="E-mail" id="email" required>
+                <input  
+                    class="anima" 
+                    type="email" 
+                    placeholder="E-mail" 
+                    id="email" 
+                    name="email" 
+                    required
+                >
 
                 <label for="telefone">telefone:</label>
-                <input  class="anima" type="tel" placeholder="telefone" id="telefone" required>
+                <input  
+                    class="anima" 
+                    type="tel" 
+                    placeholder="telefone" 
+                    id="telefone" 
+                    name="tel" 
+                    required
+                >
 
                 <label for="mensagem">Mensagem:</label>
-                <textarea class="anima" placeholder="Digite sua mensagem" id="mensagem"></textarea>
+                <textarea class="anima" placeholder="Digite sua mensagem" name="message"  id="mensagem" ></textarea>
 
                 <button class="anima" type="submit">Enviar</button>
+                <div id="responseMessage"></div>
             </form>
         </section>
     </main> 
