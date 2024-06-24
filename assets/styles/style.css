@@ -254,6 +254,7 @@
   height: 100%;
   width: 100%;
   display: grid;
+  grid-template-columns: 2fr 1fr;
   background: rgb(255, 255, 255);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.863) 50%, rgba(255, 255, 255, 0.507) 100%);
 }
@@ -261,8 +262,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: start;
   justify-content: center;
   padding: 0 10%;
   gap: 1rem;
@@ -282,7 +282,6 @@
   max-width: 700px;
   letter-spacing: 2px;
   animation: surgir 1s;
-  text-align: center;
 }
 .banner_container .info h2 {
   width: 100%;
@@ -294,12 +293,12 @@
   line-height: 3.5rem;
   text-align: center;
   display: block;
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 5.5rem;
-  text-align: center;
+  text-align: start;
   font-weight: 300;
   animation: surgir 1s;
-  max-width: 900px;
+  max-width: 800px;
 }
 .banner_container .info a {
   color: #eb532c;
@@ -327,23 +326,38 @@
 }
 .banner_container .imagens {
   display: flex;
-  flex-direction: row;
-  justify-content: normal;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .banner_container .imagens img {
-  width: 80%;
+  width: 100%;
   transform: translateX(-25%);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2588235294);
+  border-radius: 5px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1024px) {
+  .banner {
+    height: auto;
+  }
+  .banner_container {
+    grid-template-columns: 1fr;
+  }
+  .banner_container .info {
+    height: 100vh;
+  }
   .banner_container .info h2 {
     font-size: 4rem;
     line-height: 5rem;
   }
   .banner_container .imagens {
-    display: none;
+    padding: 3rem;
+  }
+  .banner_container .imagens img {
+    transform: translateX(0);
   }
 }
 @media screen and (max-width: 668px) {
@@ -356,11 +370,15 @@
   }
   .banner_container .info {
     gap: 2rem;
-    background-color: rgba(255, 255, 255, 0.7882352941);
+    background-color: rgba(255, 255, 255, 0.1568627451);
   }
   .banner_container .info h2 {
     font-size: 2.5rem;
     line-height: 3rem;
+  }
+  .banner_container .imagens {
+    background-color: #FFF;
+    padding: 3rem 1.5rem 0 1.5rem;
   }
 }
 .proposito {
@@ -556,7 +574,7 @@
   align-items: start;
   padding-left: 2rem;
   height: 100%;
-  padding: 5rem 1.5rem;
+  padding: 10rem 1.5rem;
   background-color: #eb532c;
 }
 .diferenciais_textos h2 {
@@ -570,6 +588,7 @@
   width: 100%;
   max-width: 700px;
   letter-spacing: 2px;
+  font-size: 1.5rem;
   color: white;
   margin-bottom: 2rem;
 }

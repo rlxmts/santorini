@@ -24,11 +24,12 @@
             @include mixins.flex-d-j-a(column, center, start);
             padding-left: 2rem;
             height: 100%;
-            padding: 5rem 1.5rem;
+            padding: 10rem 1.5rem;
             background-color: variaveis.$laranja;     
 
         h2{
             @include mixins.subtitulo-maiusculo();
+            font-size: 1.5rem;
             color: white;
             margin-bottom: 2rem;
         }

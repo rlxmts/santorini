@@ -17,14 +17,12 @@
         height: 100%;
         width: 100%;
         display: grid;
-        //grid-template-columns: 2fr 1fr;
-        //background-color: rgba(255, 255, 255, 0.712);
+        grid-template-columns: 2fr 1fr;
         background: rgb(255,255,255);
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.863) 50%, rgba(255, 255, 255, 0.507) 100%);
         
         .info{
-            @include mixins.flex-d-j-a(column, center, center);
-            text-align: center;
+            @include mixins.flex-d-j-a(column, center, start);
             justify-content: center;
             padding: 0 10%;
             gap: 1rem;
@@ -35,16 +33,15 @@
             h1{
                 @include mixins.subtitulo-maiusculo();
                 animation: surgir 1s ;
-                text-align: center;
             }
             h2{
                 @include mixins.titulo();
-                font-size: 5rem;
+                font-size: 4rem;
                 line-height: 5.5rem;
-                text-align: center;
+                text-align: start;
                 font-weight: 300;
                 animation: surgir 1s ;
-                max-width: 900px;
+                max-width: 800px;
             }
             
             a{
@@ -69,12 +66,14 @@
             100%{transform: translateX(0); opacity: 1;}
         }
         .imagens{
-            @include mixins.flex-d-j-a(row, normal, center);
-
+            @include mixins.flex-d-j-a(column, center, center);
             img{
-                width: 80%;
+                width: 100%;
                 transform: translateX(-25%);
                 box-shadow: 0px 0px 10px #00000042;
+                border-radius: 5px;
+                max-width: 700px;
+                margin: 0 auto;
             }
         }
     }
@@ -83,18 +82,25 @@
 @media screen and (max-width: 1024px) {
 
     .banner{
+        height: auto;
 
         &_container{
+
+            grid-template-columns: 1fr;
             .info{
+
+                height: 100vh;
                 h2{
                     font-size: 4rem;
                     line-height: 5rem;
                 }
             }
             .imagens{
-                
-                    display: none;
-                
+                    padding: 3rem;
+                    img{
+                        transform: translateX(0);
+
+                    }                
             }
         }
     }
@@ -110,11 +116,15 @@
             grid-template-columns: 1fr;
             .info{
                 gap: 2rem;
-                background-color: #ffffffc9;
+                background-color: #ffffff28;
                 h2{
                     font-size: 2.5rem;
                     line-height: 3rem;
                 }
+            }
+            .imagens{
+                background-color: #FFF;
+                padding: 3rem 1.5rem 0 1.5rem ;
             }
         }
     }
