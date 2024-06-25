@@ -2056,6 +2056,7 @@
 }
 .popup a {
   color: #eb532c;
+  font-size: 0.8rem;
 }
 .popup button {
   background-color: #eb532c;
@@ -2070,6 +2071,7 @@
   transition: 0.3s;
   display: block;
   text-align: center;
+  font-size: 0.9rem;
   line-height: 1rem;
 }
 .popup button:hover {

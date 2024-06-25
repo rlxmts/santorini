@@ -22,10 +22,12 @@
 
     a{
         color: variaveis.$laranja;
+        font-size: .8rem;
     }
 
     button{
         @include mixins.botao();
+        font-size: .9rem;
         line-height: 1rem;
     }
 }
