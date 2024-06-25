@@ -224,11 +224,11 @@
             flex-wrap: wrap;
     
             a{
-                text-align: center;
-                font-family:"Tenor Sans", sans-serif ;
-                color: white;
-                font-size: .7rem;
-                width: auto;
+                width: 100px;
+
+                img{
+                    width: 100%;
+                }
             }
         }
 
@@ -266,6 +266,12 @@
         .rodape-copy{
             span{
                 max-width: 100%;
+            }
+        }
+
+        .creditos{
+            a{
+                width: 70px;
             }
         }
 

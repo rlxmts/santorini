@@ -1435,11 +1435,10 @@
   flex-wrap: wrap;
 }
 .rodape_creditos .creditos a {
-  text-align: center;
-  font-family: "Tenor Sans", sans-serif;
-  color: white;
-  font-size: 0.7rem;
-  width: auto;
+  width: 100px;
+}
+.rodape_creditos .creditos a img {
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -1464,6 +1463,9 @@
   }
   .rodape .rodape-copy span {
     max-width: 100%;
+  }
+  .rodape .creditos a {
+    width: 70px;
   }
   .rodape_creditos {
     padding-top: 2rem;
