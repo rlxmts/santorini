@@ -253,16 +253,18 @@
 .banner_container {
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.863) 50%, rgba(255, 255, 255, 0.507) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.685) 50%, rgba(255, 255, 255, 0.507) 100%);
 }
 .banner_container .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   padding: 0 10%;
   gap: 1rem;
@@ -281,6 +283,7 @@
   width: 100%;
   max-width: 700px;
   letter-spacing: 2px;
+  text-align: center;
   animation: surgir 1s;
 }
 .banner_container .info h2 {
@@ -295,10 +298,10 @@
   display: block;
   font-size: 4rem;
   line-height: 5.5rem;
-  text-align: start;
   font-weight: 300;
   animation: surgir 1s;
-  max-width: 800px;
+  animation-delay: 0.3s;
+  max-width: 100%;
 }
 .banner_container .info a {
   color: #eb532c;
@@ -306,6 +309,7 @@
   width: -moz-fit-content;
   width: fit-content;
   animation: surgir 1s;
+  animation-delay: 0.6s;
   margin-top: 1rem;
   transition: 0.5s;
 }
@@ -316,11 +320,11 @@
 }
 @keyframes surgir {
   0% {
-    transform: translateX(30px);
+    transform: translateY(30px);
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -892,10 +896,10 @@
 }
 .produtos_cards li div .produtos-botoes a {
   background-color: #eb532c;
-  border: none;
+  border: 1px solid transparent;
   padding: 0.5rem;
   width: 100%;
-  max-width: 700px;
+  max-width: 500px;
   color: white;
   font-family: "Jost", sans-serif;
   border-radius: 20px;
@@ -1164,10 +1168,10 @@
 }
 .chamada a {
   background-color: #eb532c;
-  border: none;
+  border: 1px solid transparent;
   padding: 0.5rem;
   width: 100%;
-  max-width: 700px;
+  max-width: 500px;
   color: white;
   font-family: "Jost", sans-serif;
   border-radius: 20px;
@@ -1729,10 +1733,10 @@
 }
 .contato_form button {
   background-color: #eb532c;
-  border: none;
+  border: 1px solid transparent;
   padding: 0.5rem;
   width: 100%;
-  max-width: 700px;
+  max-width: 500px;
   color: white;
   font-family: "Jost", sans-serif;
   border-radius: 20px;
@@ -2022,5 +2026,63 @@
     width: 100px;
     height: 100px;
     bottom: -30px;
+  }
+}
+.popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  gap: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  background-color: #FFF;
+  padding: 2rem;
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.3294117647);
+  animation: entrada 1s;
+}
+.popup p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #1b1d1f;
+  max-width: 500px;
+  font-size: 0.8rem;
+  max-width: 100%;
+}
+.popup a {
+  color: #eb532c;
+}
+.popup button {
+  background-color: #eb532c;
+  border: 1px solid transparent;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 500px;
+  color: white;
+  font-family: "Jost", sans-serif;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  text-align: center;
+  line-height: 1rem;
+}
+.popup button:hover {
+  background-color: white;
+  border: 1px solid #eb532c;
+  color: #eb532c;
+}
+
+@keyframes entrada {
+  0% {
+    transform: translateY(500px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

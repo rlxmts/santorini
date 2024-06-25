@@ -16,13 +16,12 @@
     &_container{ 
         height: 100%;
         width: 100%;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
+        @include mixins.flex-d-j-a(column, center,center);
         background: rgb(255,255,255);
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.863) 50%, rgba(255, 255, 255, 0.507) 100%);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.685) 50%, rgba(255, 255, 255, 0.507) 100%);
         
         .info{
-            @include mixins.flex-d-j-a(column, center, start);
+            @include mixins.flex-d-j-a(column, center, center);
             justify-content: center;
             padding: 0 10%;
             gap: 1rem;
@@ -32,16 +31,17 @@
             
             h1{
                 @include mixins.subtitulo-maiusculo();
+                text-align: center;
                 animation: surgir 1s ;
             }
             h2{
                 @include mixins.titulo();
                 font-size: 4rem;
                 line-height: 5.5rem;
-                text-align: start;
                 font-weight: 300;
                 animation: surgir 1s ;
-                max-width: 800px;
+                animation-delay: .3s;
+                max-width: 100%;
             }
             
             a{
@@ -50,6 +50,7 @@
                 border-bottom: 1px solid variaveis.$laranja;
                 width: fit-content;
                 animation: surgir 1s ;
+                animation-delay: .6s;
                 margin-top: 1rem;
                 transition: .5s;
 
@@ -62,8 +63,8 @@
 
         }
         @keyframes surgir {
-            0%{transform: translateX(30px); opacity: 0;}
-            100%{transform: translateX(0); opacity: 1;}
+            0%{transform: translateY(30px); opacity: 0;}
+            100%{transform: translateY(0); opacity: 1;}
         }
         .imagens{
             @include mixins.flex-d-j-a(column, center, center);

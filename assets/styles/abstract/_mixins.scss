@@ -60,10 +60,10 @@
 
 @mixin botao() {
     background-color: variaveis.$laranja;
-    border: none;
+    border: 1px solid transparent;
     padding: .5rem;
     width: 100%;
-    max-width: 700px;
+    max-width: 500px;
     color: white;
     font-family: variaveis.$font-titulo;
     border-radius: 20px;
@@ -71,7 +71,7 @@
     transition: .3s;
     display: block;
     text-align: center;
-
+    
     &:hover {
         background-color: white;
         border: 1px solid variaveis.$laranja;
