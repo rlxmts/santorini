@@ -1,8 +1,6 @@
 let termos = localStorage.getItem('aceito') || '';
-console.log(termos)
 
 window.addEventListener('load', ()=> {
-
     if(termos === ''){
         criarPopUp();
     }else{
